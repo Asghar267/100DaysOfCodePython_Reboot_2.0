@@ -81,8 +81,6 @@ print("isspace :",str.isspace())      #Returns True if all characters in the str
 print("title :",str.title())          #Returns True if all words in a text start with a upper case letter,
 print("join :",str.join(names))       #Join all items in a tuple/list into a string, using a hash character as separator:
 print("",str)
-print("",str)
-print("",str)
 
 
 
