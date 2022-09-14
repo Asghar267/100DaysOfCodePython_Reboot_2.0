@@ -14,13 +14,12 @@ print("Hello Bugs")
 # memory locations which are used to store values in a computer program.
 
 a = 5
-name = "Asghar"
+name = "Asghar Abbasi"
 
 print(a)
 print(name)
 
-#    Data types
-
+#     Data types
 # integer      1,3,4
 # float        2.0, 4.5, 5.0
 # String       "asghar"
