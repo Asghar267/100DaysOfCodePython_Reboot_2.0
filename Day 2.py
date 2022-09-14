@@ -31,7 +31,7 @@ print(dic.pop("age"))  # Removes the element with the specified key
 print(dic)
 print("\n Set Methods")
 
-# Set Methods
+#   Set Methods
 fruits = {"apple", "banana", "cherry"}
 fruits.add("Mango")
 print("add: ", fruits)  # Adds an element to the set
