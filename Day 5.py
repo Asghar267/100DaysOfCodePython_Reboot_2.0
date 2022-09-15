@@ -8,7 +8,7 @@ print("Day 5 other functions lambda map filter")
 #  lambda arguments: expression
 
 double = lambda x: x * 2  # Program to show the use of lambda functions
-print(double(5))
+print("Lambda: ",double(5))
 
 #   The filter() function in Python takes in a function and a list as arguments.
 my_list = [1, 5, 4, 6, 8, 11, 3, 12]
@@ -18,4 +18,4 @@ print("filter even: ", new_list)
 # The map() function in Python takes in a function and a list.
 my_list = [1, 5, 4, 6, 8, 11, 3, 12]
 new_list = list(map(lambda x: x * 2, my_list))  # double each item in a list using map()
-print("\nmap: ",new_list)
+print("\nmap: ", new_list)
