@@ -7,7 +7,7 @@ lis.append("Python")  # Adds an element at the end of the list
 print("append :", lis)
 print(lis.pop())  # Removes the element at the specified position
 print(lis.index(4))  # Returns the index of the first element with the specified value
-print(lis.reverse())  # Reverses the order of the list
+print(lis.reverse())  # Reverse the order of the list
 print(lis.clear())  # Removes all the elements from the list
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 print("\n", letters)
