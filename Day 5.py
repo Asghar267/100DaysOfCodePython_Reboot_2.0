@@ -1,4 +1,4 @@
-print("Day 5 other functions lamda map filter")
+print("Day 5 other functions lambda map filter")
 
 '''Python lambda expressions allow you to define anonymous functions. Anonymous functions are 
    functions without names. The anonymous functions are useful when you need to use them once. 

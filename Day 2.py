@@ -17,7 +17,6 @@ letters[2:5] = [] # now remove them
 print("Removed some values: ", letters)
 
 
-
 # tuple Methods
 print("\n Tuple Methods")
 tup = (1, 4, 5, 6, "helo", 'Bugs')
