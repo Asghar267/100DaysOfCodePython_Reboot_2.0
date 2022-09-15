@@ -2,7 +2,6 @@ print("Day 4 \n Method/Functons and types\n")
 
 """What is a function in Python?
 In Python, a function is a group of related statements that performs a specific task.
-
 Functions help break our program into smaller and modular chunks. As our program grows 
 larger and larger, functions make it more organized and manageable."""
 

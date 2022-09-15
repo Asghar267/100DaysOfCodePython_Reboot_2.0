@@ -9,6 +9,14 @@ print(lis.pop())  # Removes the element at the specified position
 print(lis.index(4))  # Returns the index of the first element with the specified value
 print(lis.reverse())  # Reverses the order of the list
 print(lis.clear())  # Removes all the elements from the list
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+print("\n", letters)
+letters[2:5] = ['C', 'D', 'E'] #replace some values
+print("replaced some values :",letters)
+letters[2:5] = [] # now remove them
+print("Removed some values: ", letters)
+
+
 
 # tuple Methods
 print("\n Tuple Methods")
