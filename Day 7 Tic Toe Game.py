@@ -18,26 +18,26 @@ def display_place():  # Game Pattern
 
 def check_player1():     # Player 1 O  if condition is true player is winner
 
-    if (tic[1] == "O" and tic[2] == "O" and tic[3] == "O"  # top-left top-middle top-right
-            or tic[4] == "O" and tic[5] == "O" and tic[6] == "O"  # middle-left center middle-right
-            or tic[7] == "O" and tic[8] == "O" and tic[9] == "O"  # bottom-right bottom-middle bottom-left
-            or tic[1] == "O" and tic[4] == "O" and tic[7] == "O"  # left vertical
-            or tic[3] == "O" and tic[5] == "O" and tic[8] == "O"  # Bottom-middle center Vertical
-            or tic[3] == "O" and tic[6] == "O" and tic[9] == "O"  # Right Vertical
-            or tic[1] == "O" and tic[2] == "O" and tic[3] == "O"  # Left top center bottom-right
-            or tic[1] == "O" and tic[2] == "O" and tic[3] == "O"):  # Right-top center bottom-left
+    if (       tic[1] == "O" and tic[2] == "O" and tic[3] == "O"  # top-left top-middle top-right
+            or tic[4] == "O" and tic[5] == "O" and tic[6] == "O"   # middle-left center middle-right
+            or tic[7] == "O" and tic[8] == "O" and tic[9] == "O"   # bottom-right bottom-middle bottom-left
+            or tic[1] == "O" and tic[4] == "O" and tic[7] == "O"   # left vertical
+            or tic[2] == "O" and tic[5] == "O" and tic[8] == "O"   # Bottom-middle center Vertical
+            or tic[3] == "O" and tic[6] == "O" and tic[9] == "O"   # Right Vertical
+            or tic[1] == "O" and tic[5] == "O" and tic[9] == "O"   # top-left center bottom-right
+            or tic[3] == "O" and tic[5] == "O" and tic[7] == "O"): # top-right center bottom-left
         return True
 
 
 def check_player2():   # Player 2 O if condition is true player is winner
-    if (tic[1] == "X" and tic[2] == "X" and tic[3] == "X"  # top-left top-middle top-right
+    if (       tic[1] == "X" and tic[2] == "X" and tic[3] == "X"  # top-left top-middle top-right
             or tic[4] == "X" and tic[5] == "X" and tic[6] == "X"  # middle-left center middle-right
             or tic[7] == "X" and tic[8] == "X" and tic[9] == "X"  # bottom-right bottom-middle bottom-left
-            or tic[1] == "X" and tic[4] == "X" and tic[7] == "X"  # left vertical
-            or tic[3] == "X" and tic[5] == "X" and tic[8] == "X"  # Bottom-middle center Vertical
-            or tic[3] == "X" and tic[6] == "X" and tic[9] == "X"  # Right Vertical
-            or tic[1] == "X" and tic[2] == "X" and tic[3] == "X"  # Left top center bottom-right
-            or tic[1] == "X" and tic[2] == "X" and tic[3] == "X"):  # Right-top center bottom-left
+            or tic[1] == "X" and tic[4] == "X" and tic[7] == "X"  # left   vertical
+            or tic[2] == "X" and tic[5] == "X" and tic[8] == "X"  # middle Vertical
+            or tic[3] == "X" and tic[6] == "X" and tic[9] == "X"  # Right  Vertical
+            or tic[1] == "X" and tic[5] == "X" and tic[9] == "X"  # top-left center bottom-right
+            or tic[3] == "O" and tic[5] == "O" and tic[7] == "O"): # top-right center bottom-left
         return True
 
 
@@ -63,8 +63,8 @@ display_place()
 print("Player 1 O")
 print("Player 2 X")
 
-players_op = input("OP 1:  Play with AI\n"
-                   "OP 2:  Play With Human\n Option: ")
+players_op = input("OP 1:  Play with AI\nOP 2:  Play With Human\n Option: ")
+
 count = 1
 for i in range(5):
     p1 = check_input(input("Chose Place for O Player 1: "))
