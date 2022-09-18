@@ -1,4 +1,4 @@
-print("Day 8 Instance vs Static vs Class methods, \n")
+print("Day 9 Instance vs Static vs Class methods, \n")
 
 # Instance Method
 print(" Instance Method")
