@@ -1,3 +1,6 @@
+import concurrent.futures
+import time
+
 print("Day 14 Multithreading\n ")
 
 import threading
@@ -24,44 +27,54 @@ arr = [1, 2, 4, 6, 8, 10, 12]
 t1 = threading.Thread(target=print_square, args=(arr,))
 t2 = threading.Thread(target=print_cube, args=(arr,))
 
-t1.start()
-t2.start()
+# t1.start()
+# t2.start()
 
-t1.join()
-t2.join()
+# t1.join()
+# t2.join()
 print("Done")
 
+print()
+start = time.perf_counter()
+
+def do_something(sec):
+    print(f"sleeping {sec} sec")
+    sleep(sec)
+    return f"done slee bp {sec}"
 
 
-# Python program to illustrate the concept
-# of threading
-import threading
-import os
+with concurrent.futures.ThreadPoolExecutor() as executor:
+    # f1 = executor.submit(do_something,1)
+    # print(f1.result())
+    secs = [5,4,3,2,1]
+    """results = [executor.submit(do_something,sec) for sec in secs]
+    for f in concurrent.futures.as_completed(results):
+        print(f.result())"""
+    # both same work
+    results = executor.map(do_something,secs)
+    for result in results:
+        print(result)
 
-def task1():
-	print("Task 1 assigned to thread: {}".format(threading.current_thread().name))
-	print("ID of process running task 1: {}".format(os.getpid()))
 
-def task2():
-	print("Task 2 assigned to thread: {}".format(threading.current_thread().name))
-	print("ID of process running task 2: {}".format(os.getpid()))
+# runing 10 threads
+# threads =[]
+# for _ in range(10):
+#    t = threading.Thread(target=do_something,args=[1.5])
+#    t.start()
+#    threads.append(t)
+#
+# for t in threads: t.join()
 
-if __name__ == "__main__":
+# t1 = threading.Thread( target=do_something)
+# t2 = threading.Thread( target=do_something)
 
-	# print ID of current process
-	print("ID of process running main program: {}".format(os.getpid()))
+# t1.start()
+# t2.start()
+# t1.join()
+# t2.join()
 
-	# print name of main thread
-	print("Main thread name: {}".format(threading.current_thread().name))
+finish = time.perf_counter()
+print(f"total time {round(finish-start,3)}")
 
-	# creating threads
-	t1 = threading.Thread(target=task1, name='t1')
-	t2 = threading.Thread(target=task2, name='t2')
-
-	# starting threads
-	t1.start()
-	t2.start()
-
-	# wait until all threads finish
-	t1.join()
-	t2.join()
+# threading learned from
+# https://youtu.be/IEEhzQoKtQU
