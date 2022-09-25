@@ -49,3 +49,40 @@ print("Done writing pretty printed JSON data into a file")
 with open("developerPrettyPrint.json", "r") as read_file:
     b = json.load(read_file)
 print(b)
+
+print("\n Some exercise")
+# Exercise 1: Access the value of key2 from the following JSON
+sampleJson = """{"key1": "value1", "key2": "value2"}"""
+
+data = json.loads(sampleJson)
+print(data['key2'], "\n")
+
+# Exercise 2: PrettyPrint following JSON data
+sampleJson = {"key1": "value1", "key2": "value2"}
+data = json.dumps(sampleJson, indent=4, separators=(",", " = "))
+print(data, "\n")
+
+# Exercise 3: Sort JSON keys in and write them into a file
+sampleJson = {"id": 1, "name": "value2", "age": 29}
+with open("sampleJson.json", "w") as write_file:
+    json.dump(sampleJson, write_file, indent=4, sort_keys=True)
+    print("Done writing JSON data into a file")
+
+print("\n")
+
+# Exercise 4: Access the nested key ‘salary’ from the following JSON
+sampleJson = """{ 
+   "company":{ 
+      "employee":{ 
+         "name":"emma",
+         "payble":{ 
+            "salary":7000,
+            "bonus":800
+         }
+      }
+   }
+}"""
+
+data = json.loads(sampleJson)
+
+print(data['company']['employee']['payble']['salary'],"\n")
