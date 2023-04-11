@@ -2,11 +2,28 @@
 #
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+import random
 
 from scrapy import signals
 
 # useful for handling different item types with a single interface
-from itemadapter import is_item, ItemAdapter
+
+USERAGENTS = [
+    'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.86 Mobile Safari/537.36 (compatible; Googlebot/2.1;  http://www.google.com/bot.html)',
+    "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.1; +http://www.google.com/bot.html) Chrome/85.0.4178.0 Safari/537.36",
+
+    ]
+
+#
+# class ShowRequestHeadersMiddleware:
+#     def process_request(self, request, spider):
+#         print(f"Request header:{request.headers}")
+#
+#
+# class RotateUserAgentMiddleware:
+#     def process_request(self, request, spider):
+#         user_agent = random.choice(USERAGENTS)
+#         request.headers['User-Agent'] = user_agent
 
 
 class QoutetutorialSpiderMiddleware:
